@@ -1,0 +1,38 @@
+{% extends 'HogeMagazineBundle::base.html.twig' %}
+{% block title %}Issue list{% endblock %}
+
+{% block body -%}
+    <h1>Issue list</h1>
+
+    <table class="records_list table">
+        <thead>
+        <tr>
+            <th>Publication</th>
+            <th>Issue</th>
+            <th>Cover</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td>{{ entity.publication.name }}</td>
+                <td>#{{ entity.number }}
+                    - {% if entity.datePublication %}{{ entity.datePublication|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.cover %}<img class="img-responsive"
+                                              src="{{ asset(entity.coverWeb) }}"/>{% endif %}</td>
+                <td>
+                    <a class="btn btn-default btn-xs"
+                       href="{{ path('issue_show', { 'id': entity.id }) }}">show</a>
+                    <a class="btn btn-default btn-xs"
+                       href="{{ path('issue_edit', { 'id': entity.id }) }}">edit</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a class="btn btn-default" href="{{ path('issue_new') }}">
+        New Issue
+    </a>
+{% endblock %}

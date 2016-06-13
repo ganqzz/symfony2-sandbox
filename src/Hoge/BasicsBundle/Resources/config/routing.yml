@@ -1,0 +1,7 @@
+hoge_basics_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: HogeBasicsBundle:Default:index }
+
+hoge_basics_hello_world:
+    path:     /helloworld
+    defaults: { _controller: HogeBasicsBundle:Basics:hello }

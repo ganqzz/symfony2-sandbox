@@ -1,0 +1,4 @@
+services:
+#    hoge_basics.example:
+#        class: Hoge\BasicsBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

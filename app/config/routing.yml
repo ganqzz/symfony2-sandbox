@@ -1,0 +1,20 @@
+hoge_basics:
+    resource: "@HogeBasicsBundle/Resources/config/routing.yml"
+    prefix:   /tb
+
+custom_cms:
+    resource: "@CustomCMSBundle/Resources/config/routing.yml"
+    prefix:   /
+
+bookkeeper_manager:
+    resource: "@BookkeeperManagerBundle/Resources/config/routing.yml"
+    prefix:   /book
+
+hoge_magazine:
+    resource: "@HogeMagazineBundle/Controller/"
+    type:     annotation
+    prefix:   /hoge
+
+#app:
+#    resource: "@AppBundle/Controller/"
+#    type:     annotation
