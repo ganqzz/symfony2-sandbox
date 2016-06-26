@@ -13,7 +13,7 @@ use Hoge\MagazineBundle\Form\IssueType;
 /**
  * Issue controller.
  *
- * @Route("/issue")
+ * @Route("/issues")
  */
 class IssueController extends Controller
 {

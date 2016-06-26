@@ -5,11 +5,12 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
             {% stylesheets filter='cssrewrite'
-              '%kernel.root_dir%/../vendor/twbs/bootstrap/dist/css/bootstrap.css'
-              '%kernel.root_dir%/../vendor/twbs/bootstrap/dist/css/bootstrap-theme.css'
-              '@HogeMagazineBundle/Resources/public/css/custom.css'
+                '%kernel.root_dir%/../vendor/twbs/bootstrap/dist/css/bootstrap.css'
+                '%kernel.root_dir%/../vendor/twbs/bootstrap/dist/css/bootstrap-theme.css'
+                '@HogeMagazineBundle/Resources/public/css/custom.css'
+                output='css/built/app.css'
             %}
-            <link rel="stylesheet" href="{{ asset_url }}"/>
+                <link rel="stylesheet" href="{{ asset_url }}"/>
             {% endstylesheets %}
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
@@ -22,8 +23,9 @@
             {% javascripts
                 '%kernel.root_dir%/../vendor/components/jquery/jquery.js'
                 '%kernel.root_dir%/../vendor/twbs/bootstrap/dist/js/bootstrap.js'
+                output='js/built/app.js'
             %}
-            <script src="{{ asset_url }}"></script>
+                <script src="{{ asset_url }}"></script>
             {% endjavascripts %}
         {% endblock %}
     </body>

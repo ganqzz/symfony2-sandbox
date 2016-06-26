@@ -13,7 +13,7 @@ use Hoge\MagazineBundle\Form\PublicationType;
 /**
  * Publication controller.
  *
- * @Route("/publication")
+ * @Route("/publications")
  */
 class PublicationController extends Controller
 {
